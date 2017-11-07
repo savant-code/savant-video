@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Savant</title>
+    <%= csrf_meta_tags %>
+    <script>
+      window.EmberENV = window.EmberENV || {};
+      window.EmberENV['FORCE_JQUERY'] = true;
+    </script>
+    <%= preload_script "ember_jquery" %>
+    <%= preload_script "vendor" %>
+    <%= preload_script "application" %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
