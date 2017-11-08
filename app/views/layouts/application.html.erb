@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Savant</title>
+    <title>SavantVideo</title>
+    <%= stylesheet_link_tag    'application', media: "all" %>
+    <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
-    <script>
-      window.EmberENV = window.EmberENV || {};
-      window.EmberENV['FORCE_JQUERY'] = true;
-    </script>
-    <%= preload_script "ember_jquery" %>
-    <%= preload_script "vendor" %>
-    <%= preload_script "application" %>
   </head>
 
   <body>
+    <div> eouecuhonechuoe</div>
     <%= yield %>
+    <script type="text/x-handlebars">
+      {{ outlet }}
+    </script>
   </body>
 </html>
