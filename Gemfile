@@ -32,6 +32,8 @@ gem 'railties', '~> 5.1'
 gem 'sprockets-rails'
 gem 'seed-fu', '~> 2.3.5'
 
+gem 'devise'
+
 gem 'ember-cli-rails'
 
 gem 'sidekiq'

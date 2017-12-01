@@ -1,12 +1,14 @@
-<nav class="navbar  navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Savant</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse"  id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link" href="/hello">Hello</a></li>
-    </ul>
-    <div class="nav-item pull-right">{{login-button}}</div>
+<nav class="navbar navbar-expand-md">
+  <a class="navbar-brand" href="/">Savant</a>
+  <div class="navbar-buttons">
+    {{#unless session.isAuthenticated }}
+      <div class="nav-item pull-left">{{ login-button }}</div>
+      <div class="nav-item pull-left">{{ create-account-button }}</div>
+    {{/unless}}
+      <div class="nav-item pull-left">{{ search-bar }}</div>
+      <div class="nav-item pull-left">{{ hamburger-menu }}</div>
+    {{#if session.isAuthenticated }}
+      <div class="nav-item pull-left">{{ user-menu }}</div>
+    {{/if}}
   </div>
 </nav>

@@ -1,3 +1,47 @@
+@font-face {
+font-family: 'FontAwesome';
+src: url(font-path('fontawesome-webfont.eot'));
+src: url(font-path('fontawesome-webfont.eot?#iefix')) format('embedded-opentype'),
+       url(font-path('fontawesome-webfont.woff')) format('woff'),
+       url(font-path('fontawesome-webfont.ttf')) format('truetype'),
+       url(font-path('fontawesome-webfont.svg#fontawesomeregular')) format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+body{
+  font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+}
+
+.fa.fa-icon{
+  vertical-align: bottom;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0,0,0,.15);
+
+  .navbar-brand{
+    margin: 0px auto;
+  }
+  .navbar-buttons{
+    position: absolute;
+    right: 0px;
+
+    .fa.fa-icon{
+      font-size: 23px;
+      opacity: 0.6;
+      padding: 3px;
+      margin-top: 2px;
+    }
+    .fa.fa-icon:hover{
+      opacity: 1;
+    }
+  }
+  .nav-item {
+    margin-right: 10px;
+  }
+}
+
 .modal{
   display: block;
 }
