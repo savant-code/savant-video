@@ -34,7 +34,9 @@ gem 'seed-fu', '~> 2.3.5'
 
 gem 'devise'
 
-gem 'ember-cli-rails'
+gem "ember-cli-rails"
+
+gem 'active_model_serializers', '~> 0.8.3'
 
 gem 'sidekiq'
 gem 'message_bus'
