@@ -8,8 +8,6 @@
 ._.DS_Store
 dump.rdb
 
-bin/*
-
 data/
 
 .sass-cache/*
