@@ -44,6 +44,10 @@ gem 'message_bus'
 # for sidekiq web
 gem 'tilt', require: false
 
+# For caching
+gem 'redis'
+gem 'redis-namespace'
+
 group :assets do
   gem 'uglifier'
   gem 'rtlit', require: false # for css rtling
