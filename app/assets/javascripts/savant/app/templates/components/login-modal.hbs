@@ -12,17 +12,21 @@
         <form {{action 'authenticate' on='submit'}}>
           <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+            <input type="email" class="form-control" id=email aria-describedby="emailHelp" placeholder="Email">
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id=password placeholder="Password">
           </div>
           <button type="submit" class="btn btn-primary">Log In</button>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary">Create Account</button>
+        <div class="nav-item pull-left">{{ create-account-button }}</div>
+{{!--         <button {{action "showCreateAccountModal"}} type="button" class="btn btn-secondary">Create Account</button>
+        {{#if create-account-button.showCreateAccountModal }}
+          {{create-account-modal}}
+        {{/if}}--}}
       </div>
     </div>
   </div>
