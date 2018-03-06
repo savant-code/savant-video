@@ -1,2 +1,5 @@
 <div>index.hbs</div>
-{{model}} <br>
+{{#each model as |user|}}
+  <div class="user">User Email: {{user.email}}</div>
+{{/each}}
+{{!model}} <br>

@@ -6,6 +6,7 @@ export default Route.extend({
 //    return this.store.findAll('user');
 //  }
   model() {
-    return ['A', 'B', 'C'];
+//    return this.store.findAll('user');
+//    return ['A', 'B', 'C'];
   }
 });

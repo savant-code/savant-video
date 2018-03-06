@@ -1,6 +1,11 @@
 import Component from '@ember/component';
 
 export default Component.extend({
+  user: {
+    email: "",
+    password: ""
+  },
+
   actions: {
     closeLoginModal() {
       this.get('parentView').set('showLoginModal', false);
@@ -9,6 +14,8 @@ export default Component.extend({
     authenticate() {
       console.log(this);
       console.log(this.get('parentView'));
+      console.log(this.get('user'));
+      console.log(this.get('user').email);
       console.log(this.get('controller').get('email'));
     },
 

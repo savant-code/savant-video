@@ -14,6 +14,10 @@ export default Component.extend({
 
     createAccount(params){
       console.log(this);
+      console.log(params);
+      console.log(this.get('newUser'));
+      console.log(this.get('newUser').email);
+      console.log(this.newUser.email);
     }
   }
 });
