@@ -6,9 +6,9 @@
       <div class="nav-item pull-left">{{ create-account-button }}</div>
     {{/unless}}
       <div class="nav-item pull-left">{{ search-bar }}</div>
-      <div class="nav-item pull-left">{{ hamburger-menu }}</div>
+      <div class="nav-item dropdown pull-left">{{ hamburger-menu }}</div>
     {{#if session.isAuthenticated }}
-      <div class="nav-item pull-left">{{ user-menu }}</div>
+      <div class="nav-item dropdown pull-left">{{ user-menu }}</div>
     {{/if}}
   </div>
 </nav>
