@@ -8,6 +8,7 @@ class Api::Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
+    byebug
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       if request.format.json?

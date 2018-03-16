@@ -11,6 +11,7 @@ export default Component.extend({
     },
 
     authenticate() {
+      console.log('authenticate');
       let { identification, password } =      
 this.getProperties('identification', 'password');  
       console.log(identification);

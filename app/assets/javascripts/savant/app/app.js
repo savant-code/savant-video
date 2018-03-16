@@ -11,5 +11,4 @@ const Savant = Application.extend({
 
 loadInitializers(Savant, config.modulePrefix);
 
-
 export default Savant;
