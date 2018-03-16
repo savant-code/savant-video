@@ -7,14 +7,15 @@ export default Controller.extend({
     save(user){
       let newUser = user;
       newUser.save().catch((error) => {
-        this.set('errorMessage', error)
+        this.set('errorMessage', error);
       })
-      .then(()=>{  
+      .then((result)=>{
+        this.set('errorMessage', "Account Created!");
         this.get('session')
         .authenticate('authenticator:devise',    
           newUser.get('email'), newUser.get('password'))
         .catch((reason) => {
-          this.set('errorMessage', reason.error ||reason);
+          this.set('errorMessage', reason.error || reason);
         });
       })
     }

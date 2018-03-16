@@ -4,4 +4,5 @@ import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 export default ActiveModelAdapter.extend(DataAdapterMixin, {
   namespace: 'api',
   host: 'http://localhost:3000',
+  authorizer: 'authorizer:devise'
 });
