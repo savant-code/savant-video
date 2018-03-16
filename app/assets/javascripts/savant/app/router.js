@@ -10,6 +10,10 @@ Router.map(function() {
   this.route('admin', function() {
     this.route('courses');
   });
+
+  //Authentication
+  this.route('login');
+  this.route('signup'); 
 });
 
 export default Router;

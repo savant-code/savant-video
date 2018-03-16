@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   namespace :api do
     resources :courses
   end
+
+  post '/users/sign_in', to: "api/users/sessions#create"
 end

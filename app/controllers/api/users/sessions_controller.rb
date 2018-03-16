@@ -7,9 +7,18 @@ class Api::Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    user = User.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      if request.format.json?
+        data = {
+          token: user.authentication_token,
+          email: user.email
+        }
+        render json: data, status: 201 and return
+      end
+    end
+  end
 
   # DELETE /resource/sign_out
   # def destroy

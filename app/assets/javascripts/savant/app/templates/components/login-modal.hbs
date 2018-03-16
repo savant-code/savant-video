@@ -12,16 +12,21 @@
         <form {{action 'authenticate' on='submit'}}>
           <div class="form-group">
             <label for="email">Email address</label>
-            {{input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" value=user.email}}
+              {{input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" value=identification}}
+{{!--             {{input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" value=user.email}} --}}
 {{!--             <input type="email" class="form-control" id=email aria-describedby="emailHelp" placeholder="Email" value=user.email>--}}
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            {{input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Password" value=user.password}}
+              {{input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Password" value=password}} 
+{{!--            {{input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Password" value=user.password}} --}}
 {{!--             <input type="password" class="form-control" id=password placeholder="Password" value=user.password> --}}
           </div>
           <button type="submit" class="btn btn-primary">Log In</button>
         </form>
+        {{#if errorMessage}}
+          {{errorMessage}}
+        {{/if}}
       </div>
       <div class="modal-footer">
         <div class="nav-item pull-left">{{ create-account-button }}</div>

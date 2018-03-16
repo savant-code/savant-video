@@ -1,10 +1,31 @@
 import Component from '@ember/component';
 
+const { service } = Ember.inject;
+
 export default Component.extend({
-  newUser: {
-    username: "",
+  user: {
+    name: "",
     email: "",
-    password: ""
+    password: "",
+    passwordConfirmation: ""
+  },
+  session: service('session'),
+
+  actions: {
+    submit(){
+      console.log(this);
+      let user = this.get('user');
+      console.log(user);
+      this.attrs.triggerSave(user);
+    }
+  }
+
+
+/*  newUser: {
+    name: "",
+    email: "",
+    password: "",
+    passwordConfirmation: ""
   },
 
   actions: {
@@ -19,5 +40,5 @@ export default Component.extend({
       console.log(this.get('newUser').email);
       console.log(this.newUser.email);
     }
-  }
+  }*/
 });
